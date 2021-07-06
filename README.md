@@ -1,5 +1,4 @@
 ---
-
 # Jira Ticket Resource
 
 [![Build Status](https://travis-ci.org/vergissberlin/jira-resource.svg?branch=master)](https://travis-ci.org/vergissberlin/jira-resource)
