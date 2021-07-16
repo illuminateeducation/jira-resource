@@ -3,6 +3,6 @@ commitizen:
   changelog_incremental: true
   name: cz_conventional_commits
   tag_format: v$version
-  version: 0.2.18
+  version: 0.2.19
   version_files:
   - .version
