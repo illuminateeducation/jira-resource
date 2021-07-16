@@ -13,7 +13,7 @@ module.exports = (value) => {
 
   for (const r of replacements) {
     if (r in process.env) {
-      const regex = new RegExp(`\\\$${r}`, 'i');
+      const regex = new RegExp(`\\\$${r}`, 'ig');
       value = value.replace(regex, process.env[r]);
     }
   }
