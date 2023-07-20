@@ -628,7 +628,7 @@ describe("create or update issue", () => {
             });
         });
 
-        it("parses Concourse Metadata variables", (done) => {
+        it("parses Concourse Metadata environment variables", (done) => {
 
             let input = concourseInput();
             input.params.summary = {
