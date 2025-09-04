@@ -64,7 +64,7 @@ function searchBySummary(baseFileDir, source, params, custom_filter_str) {
 }
 
 module.exports = (baseFileDir, source, params, callback) => {
-  const searchUrl = source.url + '/rest/api/2/search/';
+  const searchUrl = source.url + '/rest/api/3/search/jql';
 
   let custom_filter_str = generateFilterStr(params);
 
