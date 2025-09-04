@@ -21,7 +21,7 @@ module.exports = (baseFileDir, source, params, callback) => {
         return done(new Error('"summary" field is required for creating new issue.'));
     }
 
-    return requestIssue(baseFileDir, source, params, source.url + '/rest/api/2/issue/', 'POST', (error, response, body) => {
+    return requestIssue(baseFileDir, source, params, source.url + '/rest/api/3/issue/', 'POST', (error, response, body) => {
       if (!error && !body) {
         return done(new Error('Could not create issue.'));
       }

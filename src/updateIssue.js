@@ -14,6 +14,6 @@ module.exports = (baseFileDir, existingIssue, source, params, callback) => {
 
     debug('Issue exists [%s], updating issue...', issueKey);
 
-    return requestIssue(baseFileDir, source, params, source.url + '/rest/api/2/issue/' + issueId, 'PUT', done);
+    return requestIssue(baseFileDir, source, params, source.url + '/rest/api/3/issue/' + issueId, 'PUT', done);
   }
 };
