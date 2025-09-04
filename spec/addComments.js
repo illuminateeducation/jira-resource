@@ -26,7 +26,7 @@ describe("addComments", () => {
         input.params.comments = [{content: "new comment"}];
 
         let addComment = nock(jira.url)
-            .post("/rest/api/2/issue/15805/comment/", {body: "new comment"})
+            .post("/rest/api/3/issue/15805/comment/", {body: "new comment"})
             .basicAuth({
                 user: jira.user,
                 pass: jira.token
@@ -48,19 +48,19 @@ describe("addComments", () => {
         ];
 
         let addComment = nock(jira.url)
-            .post("/rest/api/2/issue/15805/comment/", {body: "new comment 1"})
+            .post("/rest/api/3/issue/15805/comment/", {body: "new comment 1"})
             .basicAuth({
                 user: jira.user,
                 pass: jira.token
             })
             .reply(201)
-            .post("/rest/api/2/issue/15805/comment/", {body: "new comment 2"})
+            .post("/rest/api/3/issue/15805/comment/", {body: "new comment 2"})
             .basicAuth({
                 user: jira.user,
                 pass: jira.token
             })
             .reply(201)
-            .post("/rest/api/2/issue/15805/comment/", {body: "new comment 3"})
+            .post("/rest/api/3/issue/15805/comment/", {body: "new comment 3"})
             .basicAuth({
                 user: jira.user,
                 pass: jira.token

@@ -26,7 +26,7 @@ describe("addWatchers", () => {
         input.params.watchers = ["user1"];
 
         let addWatcher = nock(jira.url)
-            .post("/rest/api/2/issue/15805/watchers/", '"user1"')
+            .post("/rest/api/3/issue/15805/watchers/", '"user1"')
             .basicAuth({
                 user: jira.user,
                 pass: jira.token
@@ -44,19 +44,19 @@ describe("addWatchers", () => {
         input.params.watchers = ["user1", "user2", "user3"];
 
         let addWatcher = nock(jira.url)
-            .post("/rest/api/2/issue/15805/watchers/", '"user1"')
+            .post("/rest/api/3/issue/15805/watchers/", '"user1"')
             .basicAuth({
                 user: jira.user,
                 pass: jira.token
             })
             .reply(204)
-            .post("/rest/api/2/issue/15805/watchers/", '"user2"')
+            .post("/rest/api/3/issue/15805/watchers/", '"user2"')
             .basicAuth({
                 user: jira.user,
                 pass: jira.token
             })
             .reply(204)
-            .post("/rest/api/2/issue/15805/watchers/", '"user3"')
+            .post("/rest/api/3/issue/15805/watchers/", '"user3"')
             .basicAuth({
                 user: jira.user,
                 pass: jira.token
