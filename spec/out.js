@@ -69,7 +69,7 @@ describe("jira resource", () => {
             expand:
                 "operations,versionedRepresentations,editmeta,changelog,renderedFields",
             id: issueId,
-            self: jira.url + "/rest/api/3/issue/" + issueId,
+            self: jira.url + "/rest/api/2/issue/" + issueId,
             key: "ATP-1",
             fields: {
                 summary: "TEST 1.106.0"
@@ -138,13 +138,12 @@ describe("jira resource", () => {
         let issues = issue ? [issue] : [];
 
         nock(jira.url)
-            .post("/rest/api/3/search", {
-                jql:
-                    'project="ATP" AND summary~"' +
+            .post("/rest/api/3/search/jql", {
+                jql: 'project="ATP" AND summary~"' +
                     summary +
                     '"  ORDER BY id DESC',
                 maxResults: 1,
-                fields: ["key", "summary"]
+                fields: ['key', 'summary']
             })
             .basicAuth({
                 user: jira.user,
@@ -161,7 +160,7 @@ describe("jira resource", () => {
 
     function setupCreate() {
         return nock(jira.url)
-            .post("/rest/api/3/issue/", {
+            .post("/rest/api/2/issue/", {
                 fields: {
                     project: {
                         key: "ATP"
@@ -183,13 +182,13 @@ describe("jira resource", () => {
             .reply(200, {
                 id: issueId,
                 key: "ATP-51",
-                self: jira.url + "/rest/api/3/issue/" + issueId
+                self: jira.url + "/rest/api/2/issue/" + issueId
             });
     }
 
     function setupUpdate() {
         return nock(jira.url)
-            .put("/rest/api/3/issue/" + issueId, {
+            .put("/rest/api/2/issue/" + issueId, {
                 fields: {
                     project: {
                         key: "ATP"
@@ -213,13 +212,13 @@ describe("jira resource", () => {
 
     function setupAddWatchers() {
         return nock(jira.url)
-            .post("/rest/api/3/issue/" + issueId + "/watchers/", '"dave"')
+            .post("/rest/api/2/issue/" + issueId + "/watchers/", '"dave"')
             .basicAuth({
                 user: jira.user,
                 pass: jira.token
             })
             .reply(204)
-            .post("/rest/api/3/issue/" + issueId + "/watchers/", '"amier"')
+            .post("/rest/api/2/issue/" + issueId + "/watchers/", '"amier"')
             .basicAuth({
                 user: jira.user,
                 pass: jira.token
@@ -229,7 +228,7 @@ describe("jira resource", () => {
 
     function setupTransitions() {
         nock(jira.url)
-            .get("/rest/api/3/issue/" + issueId + "/transitions/")
+            .get("/rest/api/2/issue/" + issueId + "/transitions/")
             .basicAuth({
                 user: jira.user,
                 pass: jira.token
@@ -243,7 +242,7 @@ describe("jira resource", () => {
                     }
                 ]
             })
-            .get("/rest/api/3/issue/" + issueId + "/transitions/")
+            .get("/rest/api/2/issue/" + issueId + "/transitions/")
             .basicAuth({
                 user: jira.user,
                 pass: jira.token
@@ -263,7 +262,7 @@ describe("jira resource", () => {
             });
 
         return nock(jira.url)
-            .post("/rest/api/3/issue/" + issueId + "/transitions/", {
+            .post("/rest/api/2/issue/" + issueId + "/transitions/", {
                 transition: {
                     id: "321"
                 }
@@ -273,7 +272,7 @@ describe("jira resource", () => {
                 pass: jira.token
             })
             .reply(204)
-            .post("/rest/api/3/issue/" + issueId + "/transitions/", {
+            .post("/rest/api/2/issue/" + issueId + "/transitions/", {
                 transition: {
                     id: "456"
                 }

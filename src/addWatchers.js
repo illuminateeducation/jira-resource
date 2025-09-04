@@ -13,7 +13,7 @@ module.exports = (issue, source, params, callback) => {
     return callback(null, issue);
   }
 
-  const watchersUrl = source.url + '/rest/api/3/issue/' + issue.id + '/watchers/';
+  const watchersUrl = source.url + '/rest/api/2/issue/' + issue.id + '/watchers/';
 
   debug('Adding watchers...');
 

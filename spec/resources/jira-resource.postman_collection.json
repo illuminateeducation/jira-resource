@@ -50,7 +50,7 @@
                     "raw": "{\n    \"fields\": {\n       \"project\":\n       { \n          \"key\": \"{{project}}\"\n       },\n       \"summary\": \"REST ye merry gentlemen.\",\n       \"description\": \"Creating of an issue using project keys and issue type names using the REST API\",\n       \"issuetype\": {\n          \"name\": \"Task\"\n       }\n   }\n}"
                 },
                 "url": {
-                    "raw": "{{url}}/rest/api/3/issue/",
+                    "raw": "{{url}}/rest/api/2/issue/",
                     "host": [
                         "{{url}}"
                     ],
@@ -110,7 +110,7 @@
                     "raw": "{\n    \"fields\": {\n       \"project\":\n       { \n          \"key\": \"{{project}}\"\n       },\n       \"parent\":\n       { \n          \"key\": \"{{issue}}\"\n       },\n       \"summary\": \"Another subtask.\",\n       \"description\": \"Creating of an issue using project keys and issue type names using the REST API\",\n       \"issuetype\": {\n          \"name\": \"Sub: Task\"\n       }\n   }\n}"
                 },
                 "url": {
-                    "raw": "{{url}}/rest/api/3/issue/",
+                    "raw": "{{url}}/rest/api/2/issue/",
                     "host": [
                         "{{url}}"
                     ],
@@ -166,7 +166,7 @@
                     "raw": "{\n    \"body\":  \"h2. Example comment\\nLi Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles. Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues. It va esser tam simplic quam Occidental in fact, it va esser Occidental. A un Angleso it va semblar un simplificat Angles, quam un skeptic Cambridge amico dit me que Occidental es.Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles.\"\n}"
                 },
                 "url": {
-                    "raw": "{{url}}/rest/api/3/issue/{{issue}}/comment",
+                    "raw": "{{url}}/rest/api/2/issue/{{issue}}/comment",
                     "host": [
                         "{{url}}"
                     ],
@@ -204,7 +204,7 @@
                             "raw": "{\n    \"body\":  \"h2. Example comment\\nLi Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles. Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues. It va esser tam simplic quam Occidental in fact, it va esser Occidental. A un Angleso it va semblar un simplificat Angles, quam un skeptic Cambridge amico dit me que Occidental es.Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles.\"\n}"
                         },
                         "url": {
-                            "raw": "{{url}}/rest/api/3/issue/{{issue}}/comment",
+                            "raw": "{{url}}/rest/api/2/issue/{{issue}}/comment",
                             "host": [
                                 "{{url}}"
                             ],
@@ -267,7 +267,7 @@
                         {
                             "name": "location",
                             "key": "location",
-                            "value": "https://jira.netresearch.de/rest/api/3/issue/81370/comment/298321",
+                            "value": "https://jira.netresearch.de/rest/api/2/issue/81370/comment/298321",
                             "description": ""
                         },
                         {
@@ -333,7 +333,7 @@
                     ],
                     "cookie": [],
                     "responseTime": "273",
-                    "body": "{\"self\":\"https://jira.netresearch.de/rest/api/3/issue/81370/comment/298321\",\"id\":\"298321\",\"author\":{\"self\":\"https://jira.netresearch.de/rest/api/3/user?username=andre.lademann\",\"name\":\"andre.lademann\",\"key\":\"andre.lademann\",\"emailAddress\":\"andre.lademann@netresearch.de\",\"avatarUrls\":{\"48x48\":\"https://jira.netresearch.de/secure/useravatar?ownerId=andre.lademann&avatarId=15442\",\"24x24\":\"https://jira.netresearch.de/secure/useravatar?size=small&ownerId=andre.lademann&avatarId=15442\",\"16x16\":\"https://jira.netresearch.de/secure/useravatar?size=xsmall&ownerId=andre.lademann&avatarId=15442\",\"32x32\":\"https://jira.netresearch.de/secure/useravatar?size=medium&ownerId=andre.lademann&avatarId=15442\"},\"displayName\":\"André Lademann\",\"active\":true,\"timeZone\":\"Europe/Berlin\"},\"body\":\"h2. Example comment\\nLi Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles. Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues. It va esser tam simplic quam Occidental in fact, it va esser Occidental. A un Angleso it va semblar un simplificat Angles, quam un skeptic Cambridge amico dit me que Occidental es.Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles.\",\"updateAuthor\":{\"self\":\"https://jira.netresearch.de/rest/api/3/user?username=andre.lademann\",\"name\":\"andre.lademann\",\"key\":\"andre.lademann\",\"emailAddress\":\"andre.lademann@netresearch.de\",\"avatarUrls\":{\"48x48\":\"https://jira.netresearch.de/secure/useravatar?ownerId=andre.lademann&avatarId=15442\",\"24x24\":\"https://jira.netresearch.de/secure/useravatar?size=small&ownerId=andre.lademann&avatarId=15442\",\"16x16\":\"https://jira.netresearch.de/secure/useravatar?size=xsmall&ownerId=andre.lademann&avatarId=15442\",\"32x32\":\"https://jira.netresearch.de/secure/useravatar?size=medium&ownerId=andre.lademann&avatarId=15442\"},\"displayName\":\"André Lademann\",\"active\":true,\"timeZone\":\"Europe/Berlin\"},\"created\":\"2018-05-22T18:59:12.397+0200\",\"updated\":\"2018-05-22T18:59:12.397+0200\"}"
+                    "body": "{\"self\":\"https://jira.netresearch.de/rest/api/2/issue/81370/comment/298321\",\"id\":\"298321\",\"author\":{\"self\":\"https://jira.netresearch.de/rest/api/2/user?username=andre.lademann\",\"name\":\"andre.lademann\",\"key\":\"andre.lademann\",\"emailAddress\":\"andre.lademann@netresearch.de\",\"avatarUrls\":{\"48x48\":\"https://jira.netresearch.de/secure/useravatar?ownerId=andre.lademann&avatarId=15442\",\"24x24\":\"https://jira.netresearch.de/secure/useravatar?size=small&ownerId=andre.lademann&avatarId=15442\",\"16x16\":\"https://jira.netresearch.de/secure/useravatar?size=xsmall&ownerId=andre.lademann&avatarId=15442\",\"32x32\":\"https://jira.netresearch.de/secure/useravatar?size=medium&ownerId=andre.lademann&avatarId=15442\"},\"displayName\":\"André Lademann\",\"active\":true,\"timeZone\":\"Europe/Berlin\"},\"body\":\"h2. Example comment\\nLi Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles. Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues. It va esser tam simplic quam Occidental in fact, it va esser Occidental. A un Angleso it va semblar un simplificat Angles, quam un skeptic Cambridge amico dit me que Occidental es.Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles.\",\"updateAuthor\":{\"self\":\"https://jira.netresearch.de/rest/api/2/user?username=andre.lademann\",\"name\":\"andre.lademann\",\"key\":\"andre.lademann\",\"emailAddress\":\"andre.lademann@netresearch.de\",\"avatarUrls\":{\"48x48\":\"https://jira.netresearch.de/secure/useravatar?ownerId=andre.lademann&avatarId=15442\",\"24x24\":\"https://jira.netresearch.de/secure/useravatar?size=small&ownerId=andre.lademann&avatarId=15442\",\"16x16\":\"https://jira.netresearch.de/secure/useravatar?size=xsmall&ownerId=andre.lademann&avatarId=15442\",\"32x32\":\"https://jira.netresearch.de/secure/useravatar?size=medium&ownerId=andre.lademann&avatarId=15442\"},\"displayName\":\"André Lademann\",\"active\":true,\"timeZone\":\"Europe/Berlin\"},\"created\":\"2018-05-22T18:59:12.397+0200\",\"updated\":\"2018-05-22T18:59:12.397+0200\"}"
                 }
             ]
         },
@@ -394,7 +394,7 @@
                     ]
                 },
                 "url": {
-                    "raw": "{{url}}/rest/api/3/issue/{{issue}}/attachments",
+                    "raw": "{{url}}/rest/api/2/issue/{{issue}}/attachments",
                     "host": [
                         "{{url}}"
                     ],
@@ -455,7 +455,7 @@
                     "raw": "{\n    \"body\":  \"h2. Example comment\\nLi Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles. Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues. It va esser tam simplic quam Occidental in fact, it va esser Occidental. A un Angleso it va semblar un simplificat Angles, quam un skeptic Cambridge amico dit me que Occidental es.Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles.\"\n}"
                 },
                 "url": {
-                    "raw": "{{url}}/rest/api/3/issue/createmeta",
+                    "raw": "{{url}}/rest/api/2/issue/createmeta",
                     "host": [
                         "{{url}}"
                     ],
@@ -515,7 +515,7 @@
                     "raw": "{\n    \"body\":  \"h2. Example comment\\nLi Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles. Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues. It va esser tam simplic quam Occidental in fact, it va esser Occidental. A un Angleso it va semblar un simplificat Angles, quam un skeptic Cambridge amico dit me que Occidental es.Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles.\"\n}"
                 },
                 "url": {
-                    "raw": "{{url}}/rest/api/3/search?jql=assignee={{user}}",
+                    "raw": "{{url}}/rest/api/2/search?jql=assignee={{user}}",
                     "host": [
                         "{{url}}"
                     ],

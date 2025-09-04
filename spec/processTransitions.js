@@ -23,7 +23,7 @@ describe("processTransitions", () => {
 
     it("updates an issue with a transition", done => {
         nock(jira.url)
-            .get("/rest/api/3/issue/" + issue.id + "/transitions/")
+            .get("/rest/api/2/issue/" + issue.id + "/transitions/")
             .basicAuth({
                 user: jira.user,
                 pass: jira.token
@@ -39,7 +39,7 @@ describe("processTransitions", () => {
             });
 
         let transition = nock(jira.url)
-            .post("/rest/api/3/issue/" + issue.id + "/transitions/", {
+            .post("/rest/api/2/issue/" + issue.id + "/transitions/", {
                 transition: {
                     id: "51"
                 }
@@ -64,7 +64,7 @@ describe("processTransitions", () => {
         input.params.transitions = ["Reject"];
 
         nock(jira.url)
-            .get("/rest/api/3/issue/" + issue.id + "/transitions/")
+            .get("/rest/api/2/issue/" + issue.id + "/transitions/")
             .basicAuth({
                 user: jira.user,
                 pass: jira.token
@@ -84,7 +84,7 @@ describe("processTransitions", () => {
             });
 
         let transition = nock(jira.url)
-            .post("/rest/api/3/issue/" + issue.id + "/transitions/", {
+            .post("/rest/api/2/issue/" + issue.id + "/transitions/", {
                 transition: {
                     id: "60"
                 }
@@ -106,19 +106,19 @@ describe("processTransitions", () => {
         input.params.transitions = ["Submit", "Test", "Reject"];
 
         nock(jira.url)
-            .get("/rest/api/3/issue/" + issue.id + "/transitions/")
+            .get("/rest/api/2/issue/" + issue.id + "/transitions/")
             .basicAuth({ user: jira.user, pass: jira.token })
             .reply(200, {
                 expand: "transitions",
                 transitions: [{ id: "51", name: "Submit" }]
             })
-            .get("/rest/api/3/issue/" + issue.id + "/transitions/")
+            .get("/rest/api/2/issue/" + issue.id + "/transitions/")
             .basicAuth({ user: jira.user, pass: jira.token })
             .reply(200, {
                 expand: "transitions",
                 transitions: [{ id: "69", name: "Test" }]
             })
-            .get("/rest/api/3/issue/" + issue.id + "/transitions/")
+            .get("/rest/api/2/issue/" + issue.id + "/transitions/")
             .basicAuth({ user: jira.user, pass: jira.token })
             .reply(200, {
                 expand: "transitions",
@@ -129,21 +129,21 @@ describe("processTransitions", () => {
             });
 
         let transitions = nock(jira.url)
-            .post("/rest/api/3/issue/" + issue.id + "/transitions/", {
+            .post("/rest/api/2/issue/" + issue.id + "/transitions/", {
                 transition: {
                     id: "51"
                 }
             })
             .basicAuth({ user: jira.user, pass: jira.token })
             .reply(204)
-            .post("/rest/api/3/issue/" + issue.id + "/transitions/", {
+            .post("/rest/api/2/issue/" + issue.id + "/transitions/", {
                 transition: {
                     id: "69"
                 }
             })
             .basicAuth({ user: jira.user, pass: jira.token })
             .reply(204)
-            .post("/rest/api/3/issue/" + issue.id + "/transitions/", {
+            .post("/rest/api/2/issue/" + issue.id + "/transitions/", {
                 transition: {
                     id: "13"
                 }
@@ -159,7 +159,7 @@ describe("processTransitions", () => {
 
     it("isn't case sensitive for transitions", done => {
         nock(jira.url)
-            .get("/rest/api/3/issue/" + issue.id + "/transitions/")
+            .get("/rest/api/2/issue/" + issue.id + "/transitions/")
             .basicAuth({
                 user: jira.user,
                 pass: jira.token
@@ -175,7 +175,7 @@ describe("processTransitions", () => {
             });
 
         let transition = nock(jira.url)
-            .post("/rest/api/3/issue/" + issue.id + "/transitions/", {
+            .post("/rest/api/2/issue/" + issue.id + "/transitions/", {
                 transition: {
                     id: "51"
                 }

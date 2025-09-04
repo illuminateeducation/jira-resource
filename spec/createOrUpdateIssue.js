@@ -322,7 +322,7 @@ describe("create or update issue", () => {
             let input = concourseInput();
 
             nock(jira.url)
-                .post("/rest/api/3/issue/", {
+                .post("/rest/api/2/issue/", {
                     fields: {
                         project: {
                             key: "ATP"
@@ -411,7 +411,7 @@ describe("create or update issue", () => {
             expand:
                 "operations,versionedRepresentations,editmeta,changelog,renderedFields",
             id: issueId,
-            self: jira.url + "/rest/api/3/issue/" + issueId,
+            self: jira.url + "/rest/api/2/issue/" + issueId,
             key: "ATP-1",
             fields: {
                 summary: "TEST 1.106.0"
@@ -420,7 +420,7 @@ describe("create or update issue", () => {
 
         beforeEach(() => {
             update = nock(jira.url)
-                .put("/rest/api/3/issue/" + issueId, {
+                .put("/rest/api/2/issue/" + issueId, {
                     fields: {
                         project: {
                             key: "ATP"
@@ -462,7 +462,7 @@ describe("create or update issue", () => {
                         expand:
                             "operations,versionedRepresentations,editmeta,changelog,renderedFields",
                         id: issueId,
-                        self: jira.url + "/rest/api/3/issue/" + issueId,
+                        self: jira.url + "/rest/api/2/issue/" + issueId,
                         key: "ATP-1",
                         fields: {
                             summary: "TEST 1.106.0"
@@ -479,7 +479,7 @@ describe("create or update issue", () => {
             let input = concourseInput();
 
             nock(jira.url)
-                .put("/rest/api/3/issue/" + issueId, {
+                .put("/rest/api/2/issue/" + issueId, {
                     fields: {
                         project: {
                             key: "ATP"
@@ -549,7 +549,7 @@ describe("create or update issue", () => {
             };
 
             let updateWithOnlySummary = nock(jira.url)
-                .put("/rest/api/3/issue/" + issueId, {
+                .put("/rest/api/2/issue/" + issueId, {
                     fields: {
                         summary: "TEST 1.106.0",
                         project: {
@@ -678,7 +678,7 @@ ATC_EXTERNAL_URL: https://example.com`
 
 function setupCreateTask(expectedBody) {
     return nock(jira.url)
-        .post("/rest/api/3/issue/", expectedBody)
+        .post("/rest/api/2/issue/", expectedBody)
         .basicAuth({
             user: jira.user,
             pass: jira.token
@@ -692,7 +692,7 @@ function setupCreateTask(expectedBody) {
 
 function setupCreateSubTask(expectedBody) {
     return nock(jira.url)
-        .post("/rest/api/3/issue/", expectedBody)
+        .post("/rest/api/2/issue/", expectedBody)
         .basicAuth({
             user: jira.user,
             pass: jira.token

@@ -14,7 +14,7 @@ module.exports = (issue, source, params, callback) => {
     return callback(null, issue);
   }
 
-  const transitionUrl = source.url + '/rest/api/3/issue/' + issue.id + '/transitions/';
+  const transitionUrl = source.url + '/rest/api/2/issue/' + issue.id + '/transitions/';
 
   async.eachSeries(
     params.transitions,
