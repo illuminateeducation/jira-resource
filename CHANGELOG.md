@@ -1,3 +1,13 @@
+## v0.2.21 (2025-09-05)
+
+Image Build: bee5b8342b2a8a816d10ce6088bc3eb3a519ec33
+
+### Bug Fixes
+
+- (bee5b83) revert non-search endpoints to v2 and use search/jql since v3/search is deprecated [rakeshP](rakesh.pattipati@renaissance.com)
+- (8f28e5a) migrate all endpoints from Jira API v2 to v3 [rakeshP](rakesh.pattipati@renaissance.com)
+- (c4e4f52) migrate search endpoint from API v2 to v3 [rakeshP](rakesh.pattipati@renaissance.com)
+
 ## v0.2.20 (2023-07-20)
 
 Image Build: c2580e5c477031da066d80c934c70496fb20fdd3
