@@ -1,4 +1,4 @@
-name: Test
+name: npm test
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   test:
-    runs-on: cicd-prod-03-ubuntu-prod
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: ['lts/*', 'latest']
